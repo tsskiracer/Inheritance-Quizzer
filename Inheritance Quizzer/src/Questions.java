@@ -1,14 +1,22 @@
 import java.util.ArrayList;
-
+import java.util.*;
 public class Questions
 	{
 		private String question;
-		private String option1;
-		private String option2;
-		private String option3;
-		private String option4;
+		private String aTrue;
+		private String aFalse;
 		private String answer;
-		ArrayList<String> problems = new ArrayList<String>();
+		private int aNum;
+		static ArrayList<Questions> problems = new ArrayList<Questions>();
+		public Questions(String q, String t, String f, String a, int aN)
+			{
+				q=question;
+				t=aTrue;
+				f=aFalse;
+				a=answer;
+				aN=aNum;
+				
+			}
 		public String getQuestion()
 			{
 				return question;
@@ -17,37 +25,30 @@ public class Questions
 			{
 				this.question = question;
 			}
-		public String getOption1()
+		public String getaTrue()
 			{
-				return option1;
+				return aTrue;
 			}
-		public void setOption1(String option1)
+		public void setaTrue(String aTrue)
 			{
-				this.option1 = option1;
+				this.aTrue = aTrue;
 			}
-		public String getOption2()
+		public String getaFalse()
 			{
-				return option2;
+				return aFalse;
 			}
-		public void setOption2(String option2)
+		public void setaFalse(String aFalse)
 			{
-				this.option2 = option2;
+				this.aFalse = aFalse;
 			}
-		public String getOption3()
+		
+		public int getaNum()
 			{
-				return option3;
+				return aNum;
 			}
-		public void setOption3(String option3)
+		public void setaNum(int aNum)
 			{
-				this.option3 = option3;
-			}
-		public String getOption4()
-			{
-				return option4;
-			}
-		public void setOption4(String option4)
-			{
-				this.option4 = option4;
+				this.aNum = aNum;
 			}
 		public String getAnswer()
 			{
@@ -57,16 +58,27 @@ public class Questions
 			{
 				this.answer = answer;
 			}
-		public Questions(String q, String o1, String o2, String o3, String o4, String a)
+		
+		public static void fillList()
 		{
-			q=question;
-			o1=option1;
-			o2=option2;
-			o3=option3;
-			o4=option4;
-			a=answer;
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
 			
 			
 		}
+		public static void askQuestions()
+			{
+				Scanner userAnswer=new Scanner(System.in);
+				for (int i=0; i<problems.size(); i++)
+					{
+						System.out.println(problems.get(i).getQuestion());
+						System.out.println("To answer, type 1 for 'True' and 2 for 'False'");
+						int uA=userAnswer.nextInt();
+						if (uA=problems.get(i).getaNum())
+							{
+								
+							}
+						
+					}
+			}
 		
 	}

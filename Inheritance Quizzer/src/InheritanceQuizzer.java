@@ -10,6 +10,7 @@ public class InheritanceQuizzer
 				System.out.println("The code below will be referenced for this quiz:");
 				printCode();
 				
+				
 		        
 				
 			}
@@ -45,7 +46,6 @@ public class InheritanceQuizzer
 			System.out.println("     public boolean sleeperCab()");
 			System.out.println("            {*some code here*}");
 			System.out.println("     }");
-			
-			
 		}
+		
 	}
