@@ -10,11 +10,11 @@ public class Questions
 		static ArrayList<Questions> problems = new ArrayList<Questions>();
 		public Questions(String q, String t, String f, String a, int aN)
 			{
-				q=question;
-				t=aTrue;
-				f=aFalse;
-				a=answer;
-				aN=aNum;
+				question=q;
+				aTrue=t;
+				aFalse=f;
+				answer=a;
+				aNum=aN;
 				
 			}
 		public String getQuestion()
@@ -59,26 +59,40 @@ public class Questions
 				this.answer = answer;
 			}
 		
+		
 		public static void fillList()
 		{
 			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
-			
+			problems.add(new Questions("a", "b", "c", "D", 2));
 			
 		}
 		public static void askQuestions()
 			{
+				fillList();
+				int counter=0;
 				Scanner userAnswer=new Scanner(System.in);
 				for (int i=0; i<problems.size(); i++)
 					{
+						
+						
 						System.out.println(problems.get(i).getQuestion());
 						System.out.println("To answer, type 1 for 'True' and 2 for 'False'");
 						int uA=userAnswer.nextInt();
-						if (uA=problems.get(i).getaNum())
+						System.out.println();
+						System.out.println("The answer was " + problems.get(i).getAnswer() + ".");
+						if (uA==problems.get(i).getaNum())
 							{
-								
+								System.out.println("You are correct!");
+								counter++;
 							}
+						else
+							{
+								System.out.println("Sorry, you are incorrect");
+							}
+						System.out.println();
 						
 					}
+				System.out.println("You got a " + counter + " out of 24 .");
 			}
 		
 	}
