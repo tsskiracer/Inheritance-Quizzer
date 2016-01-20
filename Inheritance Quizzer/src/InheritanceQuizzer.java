@@ -14,6 +14,7 @@ public class InheritanceQuizzer
 				printCode();
 				
 				Questions.askQuestions();
+				System.out.println("Please restart using the green play button.");
 			}
 		
 		
