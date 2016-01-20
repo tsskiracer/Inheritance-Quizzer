@@ -1,25 +1,24 @@
+import java.util.*;
 
 public class InheritanceQuizzer
 	{
 
 		public static void main(String[] args)
 			{
-				
-				System.out.println("Hello and welcome to ");
-				System.out.println("the inheritance quizzer");
+				Questions.fillList();
+				System.out.println("Hello and welcome to the inheritance quizzer");
 				System.out.println();
-				System.out.println("The code below will be ");
-				System.out.println("referenced for this quiz:");
+				System.out.println();
+				System.out.println("The code below will be referenced for this quiz:");
+				System.out.println();
 				printCode();
+				
 				Questions.askQuestions();
-				
-		        
-				
 			}
+		
+		
 		public static void printCode()
 		{
-			
-			System.out.println();
 			System.out.println("public class Vehicle");
 			System.out.println("     { ");
 			System.out.println("     protected String brand;");
@@ -50,7 +49,6 @@ public class InheritanceQuizzer
 			System.out.println("     public boolean sleeperCab()");
 			System.out.println("            {*some code here*}");
 			System.out.println("     }");
-			System.out.println();
 			System.out.println();
 		}
 		

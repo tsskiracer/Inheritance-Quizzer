@@ -62,13 +62,39 @@ public class Questions
 		
 		public static void fillList()
 		{
-			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
-			problems.add(new Questions("a", "b", "c", "D", 2));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "False", 2));
+			problems.add(new Questions("If you were to attempt the code Car c=new Car()        :    c.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Car c=new Vehicle()    :    c.racecar();   :    Would it run correctly?", "True" , "False", "False", 2));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Vehicle():    v.racecar();   :    Would it run correctly?", "True" , "False", "False", 2));
 			
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.adrenalineRush();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Car c=new Vehicle()    :    c.adrenalineRush();   :    Would it run correctly?", "True" , "False", "False", 2));
+			problems.add(new Questions("If you were to attempt the code Car c=new Car()        :    c.adrenalineRush();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Vehicle():    v.adrenalineRush();   :    Would it run correctly?", "True" , "False", "True", 1));
+			
+			
+			problems.add(new Questions("If you were to attempt the code Truck t=new Car()      :   t.sleeperCab();   :    Would it run correctly?", "True" , "False", "False",2));
+			problems.add(new Questions("If you were to attempt the code Truck t=new Vehicle()  :   t.sleeperCab();   :    Would it run correctly?", "True" , "False", "False", 2));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Truck()  : v.loadCapacity(10); :    Would it run correctly?", "True" , "False", "False", 2));
+			problems.add(new Questions("If you were to attempt the code Truck t=new Truck()    : t.loadCapacity(20); :    Would it run correctly?", "True" , "False", "True", 1));
+			
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code Vehicle v=new Car()    :    v.racecar();   :    Would it run correctly?", "True" , "False", "True", 1));
+			problems.add(new Questions("If you were to attempt the code super.Car v=new Car()   :    v.racecar();   :    Would it run correctly?", "True" , "False", "False", 2));
 		}
 		public static void askQuestions()
 			{
-				fillList();
 				int counter=0;
 				Scanner userAnswer=new Scanner(System.in);
 				for (int i=0; i<problems.size(); i++)
@@ -92,7 +118,7 @@ public class Questions
 						System.out.println();
 						
 					}
-				System.out.println("You got a " + counter + " out of 24 .");
+			System.out.println("You got a " + counter + " out of " + problems.size() + ".");
 			}
-		
+
 	}
